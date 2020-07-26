@@ -34,7 +34,11 @@ from matplotlib.colors import LinearSegmentedColormap
 #dng reading requires libraw to work
 
 # Open an image
-image = misc.imread('PANO0003.jpg')
+# image = misc.imread('PANO0003.jpg')
+
+# misc doesn't works, it must be imageio instead.
+image = imageio.imread('PANO0003.jpg')
+
 
 # Get the red band from the rgb image, and open it as a numpy matrix
 #NIR = image[:, :, 0]
